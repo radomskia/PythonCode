@@ -1,0 +1,84 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Copy of Untitled32.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyPnubA17um+lMoSA/McEY9J",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/radomskia/PythonCode/blob/master/analiza%20artists\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Rnfd6zBhmvn-",
+        "colab_type": "code",
+        "outputId": "91c2caf2-03a3-404a-92fa-9a66d45f6fed",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 360
+        }
+      },
+      "source": [
+        "import pandas as pd\n",
+        "import numpy as np\n",
+        "import matplotlib.pyplot as plt\n",
+        "import seaborn as sns\n",
+        "df = pd.read_csv(\"artists.csv\")\n",
+        "df.head(5)\n",
+        "df.describe()\n",
+        "df.info()"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "/usr/local/lib/python3.6/dist-packages/IPython/core/interactiveshell.py:2718: DtypeWarning: Columns (2,4,6) have mixed types.Specify dtype option on import or set low_memory=False.\n",
+            "  interactivity=interactivity, compiler=compiler, result=result)\n"
+          ],
+          "name": "stderr"
+        },
+        {
+          "output_type": "stream",
+          "text": [
+            "<class 'pandas.core.frame.DataFrame'>\n",
+            "RangeIndex: 1466083 entries, 0 to 1466082\n",
+            "Data columns (total 10 columns):\n",
+            " #   Column            Non-Null Count    Dtype  \n",
+            "---  ------            --------------    -----  \n",
+            " 0   mbid              1466083 non-null  object \n",
+            " 1   artist_mb         1466075 non-null  object \n",
+            " 2   artist_lastfm     986756 non-null   object \n",
+            " 3   country_mb        662368 non-null   object \n",
+            " 4   country_lastfm    211498 non-null   object \n",
+            " 5   tags_mb           119946 non-null   object \n",
+            " 6   tags_lastfm       381075 non-null   object \n",
+            " 7   listeners_lastfm  986760 non-null   float64\n",
+            " 8   scrobbles_lastfm  986760 non-null   float64\n",
+            " 9   ambiguous_artist  1466083 non-null  bool   \n",
+            "dtypes: bool(1), float64(2), object(7)\n",
+            "memory usage: 102.1+ MB\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}
